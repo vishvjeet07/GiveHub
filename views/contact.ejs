@@ -1,0 +1,68 @@
+<header class="bg-blue-600 text-white text-center py-6">
+    <h1 class="text-3xl font-bold">Contact Us</h1>
+    <p class="mt-2">We'd love to hear from you!</p>
+  </header>
+
+  <main class="container mx-auto px-4 py-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <!-- Contact Form -->
+      <div class="bg-white p-8 shadow-md rounded-md">
+        <h2 class="text-2xl font-bold mb-4 text-blue-600">Contact Us</h2>
+        <form action="/feedback" method="POST">
+          <div class="mb-4">
+            <label for="name" class="block text-sm font-medium text-gray-700">Your Name</label>
+            <input type="text" id="name" name="name" required
+              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium text-gray-700">Your Email</label>
+            <input type="email" id="email" name="email" required
+              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+          </div>
+          <div class="mb-4">
+            <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+            <textarea id="message" name="message" rows="4" required
+              class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"></textarea>
+          </div>
+          <button type="submit"
+            class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="bg-blue-600 text-white p-8 shadow-md rounded-md">
+        <h2 class="text-2xl font-bold mb-4">Contact Information</h2>
+        <p class="mb-4">
+          Feel free to reach out to us via email. You can also visit K.K. shastri to meet me.
+        </p>
+        <p>
+          If you have any request for anything like Notes, Assignments reach out to us via this form.
+        </p><br>
+        <ul class="space-y-4">
+          <li class="flex items-center">
+            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M16.083 15.04A8.946 8.946 0 0112 16a8.946 8.946 0 01-4.083-1.04m8.166-4.48a8.953 8.953 0 00-.27-4.52m-7.65 0a8.953 8.953 0 00-.27 4.52m7.92 0c.09.364.154.736.154 1.12 0 .384-.064.756-.154 1.12m-7.92 0c-.09-.364-.154-.736-.154-1.12 0-.384.064-.756.154-1.12m7.92-4.52c1.126.59 2.078 1.574 2.726 2.728m-10.64 0c.648-1.154 1.6-2.138 2.726-2.728m6.188 6.208c.324.638.488 1.364.488 2.08 0 .716-.164 1.442-.488 2.08m-10.64 0c-.324-.638-.488-1.364-.488-2.08 0-.716.164-1.442.488-2.08m10.64-6.208l1.5-1.5m-13.28 0l1.5 1.5m9.5 3.5h2m-14 0h2"></path>
+            </svg>
+            vishvjeetwankhade07@gmail.com
+          </li>
+          <li class="flex items-center">
+            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 10h11m4 0h2m-6 0a4 4 0 100-8 4 4 0 000 8zm0 0v6m-7 7a9 9 0 1018 0 9 9 0 00-18 0z">
+              </path>
+            </svg>
+            Ahmedabad,Gujarat
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <p>&copy; 2025 Your Company. All Rights Reserved.</p>
+  </footer>

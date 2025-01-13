@@ -1,0 +1,92 @@
+<!-- Main Container -->
+<div class="flex justify-center items-center min-h-screen">
+
+  <!-- Form Card -->
+  <div class="bg-white p-8 w-full max-w-md">
+
+    <!-- Title -->
+    <h2 class="text-2xl font-bold text-center text-gray-700 mb-6">Upload Resource</h2>
+
+    <!-- Form -->
+    <form action="/upload" method="post" enctype="multipart/form-data" class="space-y-6">
+
+      <!-- Subject Name -->
+      <div>
+        <label for="subject" class="block text-gray-600 font-medium">Subject Name</label>
+        <input 
+          type="text" 
+          name="subject" 
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+          placeholder="Enter subject name" 
+          required>
+      </div>
+
+      <!-- Semester -->
+      <div>
+        <label for="semester" class="block text-gray-600 font-medium">Semester</label>
+        <select 
+          name="semester" 
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+          required>
+          <option value="" disabled selected>Select semester</option>
+          <option value="1">Semester 1</option>
+          <option value="2">Semester 2</option>
+          <option value="3">Semester 3</option>
+          <option value="4">Semester 4</option>
+          <option value="5">Semester 5</option>
+          <option value="6">Semester 6</option>
+          <option value="7">Semester 7</option>
+          <option value="8">Semester 8</option>
+        </select>
+      </div>
+
+      <!-- Stream -->
+      <div>
+        <label for="stream" class="block text-gray-600 font-medium">Stream</label>
+        <select 
+          name="stream" 
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+          required>
+          <option value="" disabled selected>Select stream</option>
+          <option value="BCA">BCA</option>
+        </select>
+      </div>
+
+      <!-- Category -->
+      <div>
+        <label for="category" class="block text-gray-600 font-medium">Category</label>
+        <select 
+          name="category" 
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" 
+          required>
+          <option value="" disabled selected>Select category</option>
+          <option value="notes">Notes</option>
+          <option value="assignments">Assignments</option>
+          <option value="question_papers">Question Papers</option>
+          <option value="others">Others</option>
+        </select>
+      </div>
+
+      <!-- File Upload -->
+      <div>
+        <label for="file" class="block text-gray-600 font-medium">Upload File</label>
+        <input 
+          type="file" 
+          name="file" 
+          accept="application/pdf" 
+          class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+
+      <!-- Submit Button -->
+      <div class="text-center">
+        <button 
+          type="submit" 
+          class="px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          Submit
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+</div>

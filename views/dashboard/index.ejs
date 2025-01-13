@@ -1,0 +1,76 @@
+<div class="max-w-4xl mx-auto mt-3">
+  <!-- Filter Section -->
+  <div class="flex items-center space-x-4 mb-4 animate-fadeIn">
+    <!-- Stream Filter -->
+    <div class="flex-1">
+      <label for="streamFilter" class="block text-gray-700 font-medium mb-1">Stream:</label>
+      <select 
+        id="streamFilter" 
+        class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+      >
+        <option value="all">All</option>
+        <option value="BCA">BCA</option>
+      </select>
+    </div>
+
+    <!-- Semester Filter -->
+    <div class="flex-1">
+      <label for="semesterFilter" class="block text-gray-700 font-medium mb-1">Semester:</label>
+      <select 
+        id="semesterFilter" 
+        class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+      >
+        <option value="all">All</option>
+        <option value="1">Semester 1</option>
+        <option value="2">Semester 2</option>
+        <option value="3">Semester 3</option>
+        <option value="4">Semester 4</option>
+        <option value="5">Semester 5</option>
+        <option value="6">Semester 6</option>
+        <option value="7">Semester 7</option>
+        <option value="8">Semester 8</option>
+      </select>
+    </div>
+
+    <!-- Category Filter -->
+    <div class="flex-1">
+      <label for="categoryFilter" class="block text-gray-700 font-medium mb-1">Category:</label>
+      <select 
+        id="categoryFilter" 
+        class="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+      >
+        <option value="all">All</option>
+        <option value="notes">Notes</option>
+        <option value="assignments">Assignments</option>
+        <option value="question_papers">Question Papers</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Assignments List -->
+  <ul id="assignmentsList" class="space-y-4">
+    <% assignments.forEach(assignment => { %>
+      <li
+        class="p-4 bg-white shadow-md rounded-lg border border-gray-200 flex justify-between items-center animate-slideUp hover-effect" 
+        data-semester="<%= assignment.semester %>"
+        data-stream="<%= assignment.stream %>"
+        data-category="<%= assignment.category %>">
+        <!-- File Name -->
+        <h2 class="text-lg font-semibold text-gray-800">
+          <%= assignment.subject %>
+        </h2>
+
+        <!-- Download Button -->
+        <a 
+          href="/download/<%= assignment._id %>" 
+          class="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 shadow-md transition-transform transform hover:scale-105 duration-300 text-sm" 
+          download>
+          Download
+        </a>
+      </li>
+    <% }); %>
+  </ul>
+</div>
+
+<script src="/js/index.js"></script>
+
